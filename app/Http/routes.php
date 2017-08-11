@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','servicioController@index');
+Route::post('guardando','servicioController@store');
