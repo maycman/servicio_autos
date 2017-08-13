@@ -49,7 +49,7 @@
 							<td>{{ $row->servicio_pendiente }}</td>
 							<td>{{ $row->proximo_servicio }}</td>
 							<td>{{ $row->fecha_proximo_servicio }}</td>
-							<td>Pedro</td>
+							<td>{{ $row->tecnico }}</td>
 						</tr>
 						@endforeach
 					</tbody>

@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	//$('.date').datepicker('update', new Date());
-	$('.age').datetimepicker();
+	$('.age').datetimepicker({
+		format: 'L'
+	});
 	$("#datosServicio").css("display","none");
 });
 

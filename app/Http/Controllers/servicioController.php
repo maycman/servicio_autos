@@ -39,19 +39,19 @@ class servicioController extends Controller
      */
     public function store(Request $request)
     {
-        /*$this->validate(request(), [
-            'concepto' => ['required', 'max:100'],
-            'monto' => ['required', 'numeric']
-        ]);*/
-        /*
-        $ingreso = new Ingreso;
-        $ingreso->concepto = $request->concepto;
-        $ingreso->monto = $request->monto;
-        $ingreso->save();
-        return redirect('/');
-        */
-        $datos = $request->all();
-        auto::create($datos);
+        $fecha_llegada = formatDate($request->fecha_llegada);
+        $fecha_ultimo_servicio = formatDate($request->fecha_ultimo_servicio);
+        $fecha_proximo_servicio = formatDate($request->fecha_proximo_servicio);
+        $row = new auto;
+        $row->fecha_llegada = $fecha_llegada;
+        $row->chasis = $request->chasis;
+        $row->tipo_auto = $request->tipo_auto;
+        $row->ultimo_servicio = $request->ultimo_servicio;
+        $row->fecha_ultimo_servicio = $fecha_ultimo_servicio;
+        $row->servicio_pendiente = $request->servicio_pendiente;
+        $row->proximo_servicio = $request->proximo_servicio;
+        $row->fecha_proximo_servicio = $fecha_proximo_servicio;
+        $row->save();
         \Alert::message('Nuevo auto cargado', 'info');
         return redirect()->to('/');
     }

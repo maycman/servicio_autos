@@ -14,14 +14,14 @@ class CreateAutosTable extends Migration
     {
         Schema::create('autos_nuevos', function (Blueprint $table) {
             $table->increments('id_auto');
-            $table->dateTime('fecha_llegada');
+            $table->date('fecha_llegada');
             $table->string('chasis');
             $table->string('tipo_auto');
             $table->string('ultimo_servicio')->nullable();
-            $table->dateTime('fecha_ultimo_servicio')->nullable();
+            $table->date('fecha_ultimo_servicio')->nullable();
             $table->string('servicio_pendiente')->nullable();
             $table->string('proximo_servicio')->nullable();
-            $table->dateTime('fecha_proximo_servicio')->nullable();
+            $table->date('fecha_proximo_servicio')->nullable();
             $table->string('tecnico')->nullable();
             $table->timestamps();
         });

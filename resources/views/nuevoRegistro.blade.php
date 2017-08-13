@@ -11,7 +11,7 @@
   				<legend>Datos del auto</legend>
   				<div class="form-inline">
       				<div class="form-group">
-      					<label role="fecha_llegada">Fecha Llegada</label>
+      					<label role="fecha_llegada">Fecha llegada</label>
       					<div class='input-group date age'>
                     		<input id="fecha_llegada" name="fecha_llegada" type='text' class="form-control" />
                     		<span class="input-group-addon">
@@ -33,7 +33,8 @@
 				<label role="aceptaEncuesta">¿Agregar datos de servicio?</label>
 				<input onchange="agregarServicio()" id="boton" type="checkbox" data-toggle="toggle" data-size="large" data-on="Si" data-off="No">
 			</div>
-      		<fieldset id="datosServicio">
+			<div id="datosServicio">
+      		<fieldset>
       			<legends>Datos de servicio</legend>
       			<div class="form-inline">
       				<div class="form-group">
@@ -72,6 +73,7 @@
       				</div>
       			</div>
       		</fieldset>
+      		</div>
       	</div>
       	<div class="modal-footer">
         	<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
